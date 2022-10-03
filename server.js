@@ -1,18 +1,29 @@
-'use strict';
+"use strict";
 
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const getBook = require("./modules/getBooks");
 const app = express();
 app.use(cors());
 
-const PORT = process.env.PORT || 3001;
+mongoose.connect(process.env.MONGO_DB);
+const mongoDb = mongoose.connection;
+mongoDb.on("error", console.error.bind(console, "Mongo connection error"));
+mongoDb.once("open", function () {
+  console.log("Mongoose is connected to mongo");
+});
 
-app.get('/test', (request, response) => {
+const PORT = process.env.PORT || 3002;
 
-  response.send('test request received')
+app.get("/", (req, res) => {
+  res.send("Hello from backend");
+});
 
-})
+app.get("/books", getBook);
+app.get("*", (req, res) => {
+  res.status(404).send("404 Not Found");
+});
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
