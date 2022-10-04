@@ -126,4 +126,28 @@ Actual time needed to complete: 1 hour 30 minutes
 
 ---
 
+Name of feature: Set up POST request.
+
+Estimate of time needed to complete: 30 minutes
+
+Start time: 4:30pm EST
+
+Finish time: 5:00pm EST
+
+Actual time needed to complete: 1 hour
+
+---
+
+Name of feature: Set up DELETE request.
+
+Estimate of time needed to complete: 30 minutes
+
+Start time: 5:00pm EST
+
+Finish time: 5:30pm EST
+
+Actual time needed to complete:30 minutes
+
+---
+
 ## Credit and Collaborations
