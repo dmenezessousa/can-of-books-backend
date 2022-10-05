@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const getBook = require("./modules/getBooks");
 const createBook = require("./modules/createBook");
 const deleteBook = require("./modules/deleteBook");
+const updateBook = require("./modules/updateBook");
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 //Routes
 app.get("/books", getBook);
 app.post("/books", createBook);
+app.put("/books/:id", updateBook);
 app.delete("/books/:id", deleteBook);
 app.get("*", (req, res ) => {
   res.status(404).send("404 Not Found");
