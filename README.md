@@ -126,4 +126,15 @@ Actual time needed to complete: 1 hour 30 minutes
 
 ---
 
+Name of feature: Set up PUT request.
+
+Estimate of time needed to complete: 30 hour
+
+Start time: 4:20pm EST
+
+Finish time: 4:20pm EST
+
+Actual time needed to complete: 20 minutes
+
+---
 ## Credit and Collaborations
